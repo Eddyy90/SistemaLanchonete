@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="cad.css">
+          <script src="https://kit.fontawesome.com/dd3a6b5aa9.js" crossorigin="anonymous"></script>
+          <title>Cadastrar</title>
+</head>
+<body>
+          <div id="form">
+              <form  method="post" action="{% url 'cadastrar_usuario' %}">
+                {% csrf_token %}
+                    <h2 class="title">Cadastrar
+                    </h2>
+                   <label for="">Nome</label>
+                 <div class="input">
+               <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+               <input id="username"  name="username" placeholder="Usuario" type="text">  
+                 </div>   
+                   <label for="email">Email </label>
+                 <div class="input">
+                <i class="fa-regular fa-envelope"></i>
+               <input id="email" name="email" placeholder="Email" type="text">
+                 </div> 
+                   <label for="">Senha</label> 
+                 <div class="input">
+              <i class="fa fa-key" aria-hidden="true"></i>
+                <input id="senha" placeholder="Senha" type="password">
+                 </div>
+
+                 <div id="btn">
+                      <button type="submit">Cadastrar</button>
+                 </div>
+
+              </form>
+          </div>
+</body>
+</html>
